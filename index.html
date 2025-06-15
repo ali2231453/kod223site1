@@ -1,18 +1,15 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <title>Kod223 | Giriş Paneli</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Kod223.com, sadece kullanıcı adı ve şifreyle erişilebilen özel bir sohbet panelidir. Gizlilik ve özel içerikler burada.">
-
-  <!-- Sosyal medya ve SEO için -->
   <meta property="og:title" content="Kod223 | Giriş Paneli" />
   <meta property="og:description" content="Sadece giriş bilgisi olanların erişebileceği özel sohbet sayfası." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://kod223.com/" />
   <meta name="robots" content="index, follow" />
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Giriş</title>
+  <title>Kod223 | Giriş Paneli</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -24,6 +21,7 @@
       height: 100vh;
       margin: 0;
     }
+
     #login-box {
       background: #666666;
       padding: 30px;
@@ -32,9 +30,11 @@
       width: 300px;
       text-align: center;
     }
-    input[type="text"], input[type="password"] {
+
+    input[type="text"],
+    input[type="password"] {
       background: #999999;
-      color: #fff;  
+      color: #fff;
       width: 90%;
       padding: 10px;
       margin: 10px 0;
@@ -42,10 +42,11 @@
       border: 1px solid #ccc;
       font-size: 16px;
     }
+
+    input::placeholder {
+      color: #000;
     }
-     placeholder{
-       color: #000;
-    }
+
     button {
       background: #999999;
       color: #fff;
@@ -56,13 +57,40 @@
       font-size: 16px;
       margin-top: 10px;
     }
+
     button:hover {
       background: #fff;
+      color: #000;
     }
+
     #error-msg {
       color: red;
       margin-top: 10px;
       height: 18px;
+    }
+
+    #footer-signature {
+      position: fixed;
+      bottom: 10px;
+      right: 15px;
+      font-size: 0.9rem;
+      color: #000;
+      font-family: sans-serif;
+      z-index: 9999;
+      background-color: rgba(255, 255, 255, 0.7);
+      padding: 3px 8px;
+      border-radius: 8px;
+      box-shadow: 0 0 4px rgba(0,0,0,0.1);
+      user-select: none;
+    }
+
+    @media (max-width: 600px) {
+      #footer-signature {
+        font-size: 0.8rem;
+        bottom: 8px;
+        right: 10px;
+        padding: 2px 6px;
+      }
     }
   </style>
 </head>
@@ -74,6 +102,8 @@
     <button onclick="login()">Giriş</button>
     <div id="error-msg"></div>
   </div>
+
+  <div id="footer-signature">Ali ÖĞÜTLÜ</div>
 
   <script>
     const users = {
@@ -92,32 +122,5 @@
       }
     }
   </script>
-  <div id="footer-signature">Ali ÖĞÜTLÜ</div>
-
-<style>
-  #footer-signature {
-    position: fixed;
-    bottom: 10px;
-    right: 15px;
-    font-size: 0.9rem;
-    color: #000;
-    font-family: sans-serif;
-    z-index: 9999;
-    background-color: rgba(255, 255, 255, 0.7);
-    padding: 3px 8px;
-    border-radius: 8px;
-    box-shadow: 0 0 4px rgba(0,0,0,0.1);
-    user-select: none;
-  }
-
-  @media (max-width: 600px) {
-    #footer-signature {
-      font-size: 0.8rem;
-      bottom: 8px;
-      right: 10px;
-      padding: 2px 6px;
-    }
-  }
-</style>
 </body>
 </html>
